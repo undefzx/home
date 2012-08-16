@@ -1,5 +1,7 @@
-# включаем utf8, ага
-defutf8 on 
+password
+
+# включаем utf8
+defutf8 on
 
 # For a complete list of available commands, see http://bit.ly/jLtj
 
@@ -16,9 +18,8 @@ autodetach            on              # default: on
 bell_msg              "bell     in %n (%t) [%w:%s]~"
 
 hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][%{w}%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+hardstatus string '%{= kG}[ %{G}%H ]%{g}[%{w}%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
 
-#caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
 
 # This command controls the display of the window captions. Normally a caption 
 # is only used if more than one window is shown on the display.
@@ -28,7 +29,7 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%{w}%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?
 crlf                  off             # default: off
 
 # Select default utmp logging behavior. 
-#deflogin              off             # default: on
+deflogin              off             # default: on
 
 # Set default lines of scrollback. 
 defscrollback         10000            # default: 100
@@ -41,10 +42,7 @@ hardcopy_append       on              # default: off
 # line. The type 'lastline' will reserve the last line of the display for the 
 # hardstatus. Prepending the word 'always' will force screen to use the type 
 # even if the terminal supports a hardstatus line. 
-##hardstatus alwayslastline
-##hardstatus string  "%{+b kr}[ %H ]%{= kw}[%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}] %{ky} Load: %l %-=%{kb} %c  %Y.%m.%d"
-
-
+#hardstatus            alwayslastline  "%{+b kr}[ %H ] %{ky} Load: %l %-=%{kb} %c  %Y.%m.%d"
 msgwait               15
 
 # Set message displayed on pow_detach (when HUP is sent to screen's parent
@@ -63,21 +61,25 @@ sorendition           gK
 # Do NOT display copyright notice on startup.
 startup_message       off             # default: on
 
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
+
 # Set $TERM for new windows. I have more luck with 'linux' than Terminal's 
 # default 'xterm-color' (^H problems). Comment out to use the default. 
-term                  xterm-color
+term                  xterm-256color
 
 # Tweak termcap, terminfo, and termcapinfo  entries for best performance.
 termcap               linux           'AF=\E[3%dm:AB=\E[4%dm'
-termcap               xterm-color     'AF=\E[3%dm:AB=\E[4%dm'
+termcap               xterm-256color     'AF=\E[3%dm:AB=\E[4%dm'
 terminfo              linux           'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
-terminfo              xterm-color     'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+terminfo              xterm-256color     'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
 
 # Allow xterm / Terminal scrollbars to access the scrollback buffer. This 
 # enables the behavior you'd expect, instead of losing the content that scrolls 
 # out of the window. 
 termcapinfo           linux           ti@:te@
-termcapinfo           xterm-color     ti@:te@
+termcapinfo           xterm*          ti@:te@
 
 
 # Use visual bell instead of audio bell.
@@ -86,5 +88,5 @@ vbell                 on              # default: ???
 # Message to be displayed when the visual bell is triggered.
 vbell_msg             " *beep* "
 
-# как же мы без скринсейвера
-idle 30 eval "screen cmatrix -f -o -u 20" "idle 0"
+# скринсейвер
+#idle 30 eval "screen cmatrix -f -o -u 20" "idle 0"

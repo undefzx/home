@@ -60,7 +60,7 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'pythonhelper'
 "Bundle 'vim-scripts/AutoFold.vim'
 Bundle 'pangloss/vim-simplefold'
-
+Bundle 'jiangmiao/auto-pairs'
 
 filetype plugin indent on     " required! 
 " /Vundle
@@ -72,8 +72,8 @@ let g:acp_behaviorPerlOmniLength=1 " AutoComplPop
 nmap <silent> <F5> <Plug>ToggleProject
 imap <silent> <F5> <Esc><Plug>ToggleProject
 
-"set list          " отображать табы (работает вместе с listchars)
-"set listchars=tab:\|\ \,trail:> " отображать табы и пробелы
+set list          " отображать табы (работает вместе с listchars)
+set listchars=tab:\|\ \,trail:> " отображать табы и пробелы
 
 " remeber cursor position in edited file
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -207,3 +207,5 @@ vnoremap <A-k> :m-2<CR>gv=gv
 "set foldenable  
 "set foldmethod=syntax
 "syn region CodeBlock start=/{/ end=/}/ transparent fold
+
+set complete -=i
