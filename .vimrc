@@ -209,3 +209,4 @@ vnoremap <A-k> :m-2<CR>gv=gv
 "syn region CodeBlock start=/{/ end=/}/ transparent fold
 
 set complete -=i
+set incsearch
