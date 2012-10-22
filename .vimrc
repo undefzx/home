@@ -61,6 +61,7 @@ Bundle 'pythonhelper'
 "Bundle 'vim-scripts/AutoFold.vim'
 Bundle 'pangloss/vim-simplefold'
 Bundle 'jiangmiao/auto-pairs'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on     " required! 
 " /Vundle
@@ -68,6 +69,10 @@ filetype plugin indent on     " required!
 let g:pep8_map='<leader>8'
 let g:indexer_disableCtagsWarning=1 " indexer
 let g:acp_behaviorPerlOmniLength=1 " AutoComplPop
+
+" jiangmiao/auto-pairs
+let g:AutoPairsFlyMode = 0
+let g:AutoPairsMapBS = 0
 
 nmap <silent> <F5> <Plug>ToggleProject
 imap <silent> <F5> <Esc><Plug>ToggleProject
