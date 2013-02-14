@@ -1,10 +1,25 @@
 function parse_git_branch {
-  ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
-  echo "("${ref#refs/heads/}")"
+git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ :: (\1)/'
 }
-
-RED="\[\033[0;31m\]"
-YELLOW="\[\033[0;33m\]"
-GREEN="\[\033[0;32m\]"
-
-PS1="$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ "
+function proml {
+local BLUE="\[\033[0;34m\]"
+local RED="\[\033[0;31m\]"
+local LIGHT_RED="\[\033[1;31m\]"
+local GREEN="\[\033[0;32m\]"
+local LIGHT_GREEN="\[\033[1;32m\]"
+local WHITE="\[\033[1;37m\]"
+local LIGHT_GRAY="\[\033[0;37m\]"
+local DEFAULT="\[\033[0m\]"
+case $TERM in
+xterm*)
+TITLEBAR='\[\033]0;\u@\h:\w\007\]'
+;;
+*)
+TITLEBAR=""
+;;
+esac
+PS1="${TITLEBAR}\u@\h:\w$WHITE\$(parse_git_branch)$LIGHT_GRAY\$$DEFAULT "
+PS2='> '
+PS4='+ '
+}
+proml
