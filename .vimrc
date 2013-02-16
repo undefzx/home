@@ -216,3 +216,10 @@ vnoremap <A-k> :m-2<CR>gv=gv
 
 set complete -=i
 set incsearch
+
+" vertical column
+if v:version >= 703
+	set colorcolumn=81
+	highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+endif
+
