@@ -18,7 +18,7 @@ TITLEBAR='\[\033]0;\u@\h:\w\007\]'
 TITLEBAR=""
 ;;
 esac
-PS1="${TITLEBAR}\u@\h:\w$WHITE\$(parse_git_branch)$LIGHT_GRAY\$$DEFAULT "
+PS1="${TITLEBAR}\u@\h:\w$GREEN\$(parse_git_branch)$LIGHT_GRAY\$$DEFAULT "
 PS2='> '
 PS4='+ '
 }
