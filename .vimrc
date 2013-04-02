@@ -218,3 +218,5 @@ set complete -=i
 set incsearch
 :set colorcolumn=81
 :highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
+
+:set mouse=a
