@@ -63,6 +63,7 @@ Bundle 'pangloss/vim-simplefold'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/Jinja'
+Bundle 'vim-scripts/Align'
 
 filetype plugin indent on     " required! 
 " /Vundle
