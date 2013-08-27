@@ -139,7 +139,7 @@ set backspace=indent,eol,start whichwrap+=<,>,[,] " use backspace instead of "x"
 "let NERDTreeQuitOnOpen=1
 let NERDTreeShowBookmarks=1
 map <F3> <Esc>:NERDTreeToggle<CR>
-
+let NERDTreeIgnore = ['\.pyc$']
 
 " tag list
 map <F4> :TlistToggle<CR>
@@ -218,9 +218,13 @@ vnoremap <A-k> :m-2<CR>gv=gv
 set complete -=i
 set incsearch
 
+"Mouse support
+:set mouse=a
+
 " vertical column
 if v:version >= 703
 	set colorcolumn=81
 	highlight ColorColumn ctermbg=lightgrey ctermfg=Black guibg=lightgrey guifg=Black
 endif
 
+nmap <F7> i+++++++++1+++++++++2+++++++++3+++++++++4+++++++++5+++++++++6+++++++++7+++++++++8<ESC>

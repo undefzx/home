@@ -4,3 +4,4 @@ git clone https://github.com/undefzx/home.git ./
 cp -r .vim ../
 ./init.sh
 ./.vim/vim_init.sh
+vim -c BundleInstall -c qa
