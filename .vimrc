@@ -1,5 +1,6 @@
 set t_Co=256
 
+syntax on
 colorscheme molokai
 "colorscheme far_true
 set tags=./tags;/
