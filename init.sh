@@ -1,4 +1,5 @@
 ln -s ~/home/.vimrc ~/.vimrc
+ln -s ~/home/.tmux.conf ~/.tmux.conf
 ln -s ~/home/.gitignore ~/.gitignore
 ln -s ~/home/.bash_user ~/.bash_user
 echo ". ~/.bash_user" >> ~/.bashrc
