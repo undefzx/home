@@ -23,3 +23,8 @@ PS2='> '
 PS4='+ '
 }
 proml
+
+
+
+alias s='git status'
+alias d='git diff'
