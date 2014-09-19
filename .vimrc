@@ -1,5 +1,6 @@
 set t_Co=256
 
+syntax on
 colorscheme molokai
 "colorscheme far_true
 set tags=./tags;/
@@ -33,7 +34,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/taglist.vim'
-Bundle 'slack/vim-bufexplorer'
+Bundle 'jlanzarotta/bufexplorer'
 Bundle 'c9s/perlomni.vim'
 Bundle 'msanders/snipmate.vim'
 " vim-scripts repos
@@ -50,7 +51,7 @@ Bundle 'perl-support.vim'
 Bundle 'matchit.zip'
 Bundle 'indentpython.vim'
 Bundle 'pythoncomplete'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 ""Bundle 'kevinw/pyflakes-vim'
 Bundle 'pyflakes.vim'
 Bundle 'pep8'
@@ -174,7 +175,7 @@ set tabstop     =4  " ширина таба 4 пробела
 set shiftwidth  =4  " кол-во пробелов при отступах в 'cindent', >>, <<, и т.д.
 set textwidth   =0 " ширина текстовой строки
 " заменять таб пробелами
-"set expandtab
+set expandtab
 
 let Tlist_Inc_Winwidth       = 0 " TagList: Не расширять окошко
 let Tlist_Use_Right_Window   = 1 " Открываться в окошке справа

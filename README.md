@@ -9,4 +9,4 @@ Install
 ====
 
     cd
-    curl https://raw.github.com/undefzx/home/master/install.sh | bash
+    curl https://raw.githubusercontent.com/undefzx/home/master/install.sh | bash
