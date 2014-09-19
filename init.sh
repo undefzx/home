@@ -11,4 +11,4 @@ git config --global user.email "dmitriy.boyarshinov@gmail.com"
 if [ ! -d ~/bash_completion.d  ]; then
     mkdir ~/bash_completion.d
 fi
-wget https://raw.githubusercontent.com/bobthecow/git-flow-completion/master/git-flow-completion.bash -O ~/bash_completion.d/.git-flow-completion.sh
+wget https://raw.githubusercontent.com/bobthecow/git-flow-completion/master/git-flow-completion.bash -O ~/bash_completion.d/.git--completion.sh
