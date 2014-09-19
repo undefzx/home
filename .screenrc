@@ -70,10 +70,10 @@ defbce "on"
 term                  xterm-256color
 
 # Tweak termcap, terminfo, and termcapinfo  entries for best performance.
-termcap               linux           'AF=\E[3%dm:AB=\E[4%dm'
-termcap               xterm-256color     'AF=\E[3%dm:AB=\E[4%dm'
-terminfo              linux           'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
-terminfo              xterm-256color     'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+#termcap               linux           'AF=\E[3%dm:AB=\E[4%dm'
+#termcap               xterm-256color     'AF=\E[3%dm:AB=\E[4%dm'
+#terminfo              linux           'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
+#terminfo              xterm-256color     'AF=\E[3%p1%dm:AB=\E[4%p1%dm'
 
 # Allow xterm / Terminal scrollbars to access the scrollback buffer. This 
 # enables the behavior you'd expect, instead of losing the content that scrolls 

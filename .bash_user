@@ -25,6 +25,9 @@ PS4='+ '
 proml
 
 
+
+alias s='git status'
+alias d='git diff'
 export EDITOR=vim
 
 # Predictable SSH authentication socket location.

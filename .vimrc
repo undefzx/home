@@ -64,6 +64,7 @@ Bundle 'pangloss/vim-simplefold'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/Jinja'
+Bundle 'vim-scripts/Align'
 
 filetype plugin indent on     " required! 
 " /Vundle
@@ -139,7 +140,7 @@ set backspace=indent,eol,start whichwrap+=<,>,[,] " use backspace instead of "x"
 "let NERDTreeQuitOnOpen=1
 let NERDTreeShowBookmarks=1
 map <F3> <Esc>:NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 
 " tag list
 map <F4> :TlistToggle<CR>
