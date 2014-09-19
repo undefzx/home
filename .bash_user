@@ -23,3 +23,15 @@ PS2='> '
 PS4='+ '
 }
 proml
+
+
+export EDITOR=vim
+
+# Predictable SSH authentication socket location.
+SOCK="$HOME/.ssh/ssh_auth_sock"
+if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
+then
+    rm -f $SOCK
+    ln -sf $SSH_AUTH_SOCK $SOCK
+    export SSH_AUTH_SOCK=$SOCK
+fi
