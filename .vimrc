@@ -65,10 +65,20 @@ Bundle 'jiangmiao/auto-pairs'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-scripts/Jinja'
 Bundle 'vim-scripts/Align'
+Bundle 'mhinz/vim-startify'
+Bundle 'airblade/vim-rooter'
 
 filetype plugin indent on     " required! 
 " /Vundle
 
+" Startify
+let g:startify_change_to_dir = 0
+let g:startify_files_number = 8
+let g:startify_bookmarks = ['~/.vimrc',]
+let g:startify_skiplist = ['vimrc',]
+
+" Rooter
+let g:rooter_patterns = ['tags', '.git', '.git/']
 let g:pep8_map='<leader>8'
 let g:indexer_disableCtagsWarning=1 " indexer
 let g:acp_behaviorPerlOmniLength=1 " AutoComplPop
@@ -229,3 +239,6 @@ if v:version >= 703
 endif
 
 nmap <F7> i+++++++++1+++++++++2+++++++++3+++++++++4+++++++++5+++++++++6+++++++++7+++++++++8<ESC>
+
+
+
