@@ -38,3 +38,5 @@ then
     ln -sf $SSH_AUTH_SOCK $SOCK
     export SSH_AUTH_SOCK=$SOCK
 fi
+
+source /etc/profile.d/rvm.sh
