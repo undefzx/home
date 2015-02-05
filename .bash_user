@@ -39,4 +39,4 @@ then
     export SSH_AUTH_SOCK=$SOCK
 fi
 
-source /etc/profile.d/rvm.sh
+#source /etc/profile.d/rvm.sh

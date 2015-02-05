@@ -67,7 +67,6 @@ Bundle 'vim-scripts/Jinja'
 Bundle 'vim-scripts/Align'
 Bundle 'Syntastic'
 Bundle 'mhinz/vim-startify'
-Bundle 'airblade/vim-rooter'
 
 filetype plugin indent on     " required! 
 " /Vundle
@@ -78,18 +77,9 @@ let g:startify_files_number = 8
 let g:startify_bookmarks = ['~/.vimrc',]
 let g:startify_skiplist = ['vimrc',]
 
-" Rooter
-let g:rooter_patterns = ['tags', '.git', '.git/']
-let g:pep8_map='<leader>8'
-let g:indexer_disableCtagsWarning=1 " indexer
-let g:acp_behaviorPerlOmniLength=1 " AutoComplPop
-
 " jiangmiao/auto-pairs
 let g:AutoPairsFlyMode = 0
 let g:AutoPairsMapBS = 0
-
-nmap <silent> <F5> <Plug>ToggleProject
-imap <silent> <F5> <Esc><Plug>ToggleProject
 
 set list          " отображать табы (работает вместе с listchars)
 set listchars=tab:\|\ \,trail:> " отображать табы и пробелы
