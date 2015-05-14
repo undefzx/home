@@ -1,4 +1,5 @@
 ln -s ~/home/.vimrc ~/.vimrc
+ln -s ~/home/.tmux.conf ~/.tmux.conf
 ln -s ~/home/.gitignore ~/.gitignore
 ln -s ~/home/.bash_user ~/.bash_user
 echo ". ~/.bash_user" >> ~/.bashrc
@@ -11,3 +12,4 @@ if [ ! -d ~/bash_completion.d  ]; then
     mkdir ~/bash_completion.d
 fi
 wget https://raw.githubusercontent.com/bobthecow/git-flow-completion/master/git-flow-completion.bash -O ~/bash_completion.d/.git-flow-completion.sh
+wget https://raw.githubusercontent.com/tmuxinator/tmuxinator/master/completion/tmuxinator.bash -O ~/bash_completion.d/tmuxinator.bash
