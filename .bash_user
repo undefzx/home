@@ -23,3 +23,9 @@ PS2='> '
 PS4='+ '
 }
 proml
+
+
+export WORKON_HOME=~/.virtualenvs
+. /usr/local/bin/virtualenvwrapper.sh
+export PATH=$PATH:/usr/local/cuda-6.5/bin
+
