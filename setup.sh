@@ -1,7 +1,11 @@
 # general
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install git vim ctags
+sudo apt-get install git ctags
+
+# vim
+sudo apt-get install vim vim-nox-py2
+#update-alternatives --config vim
 
 # devel
 sudo apt-get install linux-headers-$(uname -r) build-essential
