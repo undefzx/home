@@ -11,7 +11,7 @@ sudo apt-get install vim vim-nox-py2
 sudo apt-get install linux-headers-$(uname -r) build-essential
 
 # python
-sudo apt-get python-pip
+sudo apt-get install python-pip
 sudo apt-get install python2.7-dev
 
 # virtualenv
